@@ -7,8 +7,9 @@ cp /root/mecab-backup/bin/* /usr/local/bin/
 
 export CGO_LDFLAGS="`mecab-config --libs`"
 export CGO_CFLAGS="-I`mecab-config --inc-dir`"
+export CC=/usr/bin/clang
 
 go get -u github.com/gin-gonic/gin
 go get -u github.com/bluele/mecab-golang
 
-#go run ./main.go
+go run ./src/

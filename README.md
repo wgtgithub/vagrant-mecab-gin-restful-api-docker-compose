@@ -33,6 +33,7 @@ Note:
     ```
     $ export CGO_LDFLAGS="-L/to/lib -lmecab -lstdc++"
     $ export CGO_CFLAGS="-I/to/include"
+    $ export CC=/usr/bin/clang
     $ go get github.com/bluele/mecab-golang
     ```
     - Installed mecab-config then do the following commands,

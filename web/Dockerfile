@@ -5,7 +5,7 @@ COPY ./src/ /go/src/
 COPY ./runserver.sh /
 
 RUN apk add --update --no-cache build-base
-ENV build_deps 'curl git bash file sudo openssh'
+ENV build_deps 'curl git bash file sudo openssh clang'
 ENV dependencies 'openssl'
 
 RUN apk add --update --no-cache ${build_deps} \
