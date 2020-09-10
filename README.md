@@ -7,17 +7,15 @@ Usage:
     - cd ./web/
     - docker-compose --build -d
 
-- setup flask into your PC after installed python and pip
-    - pip install -upgrade pip
-    - if on MacOS append --user: pip upgrade pip --user
-    - export FLASK_APP=./web/app/app.py
+- setup go into your MacOS
+    - https://golang.org/doc/install
 
-- run flask: start app
-    - flask run
+- run gin: start app
+    - go run ./web/src/
     - if stop press ctrl+c
 
 - api check
-    - curl http://localhost/targetwords/NiziProjectから選ばれたNiziUの９人のMember-Mako,Rio,Maya,Rio,Riku,Ayaka,Mayuka,MiihiそしてNina 
+    - curl http://localhost:8080/targetwords?letter=NiziUのDebutは間近ですといってもまだ２ヶ月ありますが 
 
 About Docker Image
 - Dockerfile uses wgtdocker/mecab-python-docker:latest as docker pull image
@@ -43,8 +41,4 @@ Note:
     $ go get github.com/bluele/mecab-golang
     ```
 
-```
-export CGO_LDFLAGS='-L/usr/local/Cellar/mecab/0.996/lib -lmecab -lstdc++'
-export CGO_CFLAGS='-I/usr/local/Cellar/mecab/0.996/include'
-```
     
