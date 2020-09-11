@@ -20,7 +20,7 @@ services:
       - web
 
   web:
-    entrypoint: ["sh", "-c", "sleep 2073600"]
+    #entrypoint: ["sh", "-c", "sleep 2073600"]
     build:
       context: ./web/
     ports:
