@@ -4,6 +4,7 @@
 cp -r /root/mecab-backup/lib/mecab /usr/local/lib/
 cp /root/mecab-backup/lib/libmecab.* /usr/local/lib/
 cp /root/mecab-backup/bin/* /usr/local/bin/
+ln -s /usr/local/lib/mecab/dic/mecab-ipadic-meologd /usr/local/lib/mecab/ipadic
 
 export CGO_LDFLAGS="`mecab-config --libs`"
 export CGO_CFLAGS="-I`mecab-config --inc-dir`"

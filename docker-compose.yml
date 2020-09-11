@@ -1,8 +1,7 @@
-version: '3'
+version: "3"
 services:
-
   mecab:
-#    entrypoint: ["sh", "-c", "sleep 2073600"]
+    #    entrypoint: ["sh", "-c", "sleep 2073600"]
     image: wgtdocker/mecab-0.996-alpine3.12:latest
     volumes:
       - mecab-libexec:/usr/local/libexec
@@ -35,13 +34,10 @@ services:
       - mecab-include:/usr/local/include
 
   redis:
-      image: redis
+    image: redis
 
 volumes:
   mecab-libexec:
   mecab-backup:
   mecab-etc:
   mecab-include:
-
-
-
